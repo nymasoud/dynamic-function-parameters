@@ -1,0 +1,33 @@
+// anonymous function - Dec 2022
+//Dynamic Function Parameters Practice
+
+
+// ...fns means list of all functions(past, present and future) that match the contract
+function login(email, ...fns) { 
+    for (let i = 0; i < fns.length; i++) {
+        fns[i](email);
+    }
+    console.log("saving to database: " + email);
+}
+
+function googleLogin(email) {
+    console.log("saving to database: " + email);
+    console.log("I AM USING GOOGLE TO LOGIN: " + email + "@gmail.com");
+}
+function facebookLogin(email) {
+    console.log("saving to database: " + email);
+    console.log("I AM USING GOOGLE TO LOGIN: " + email + "@facebook.com");
+}
+function linkedInLogin(email) {
+    console.log("saving to database: " + email);
+    console.log("I AM USING GOOGLE TO LOGIN: " + email + "@linkedin.com");
+}
+function yahooLogin(email) {
+    console.log("saving to database: " + email);
+    console.log("I AM USING Yahoo TO LOGIN: " + email + "@yahoo.com");
+}
+
+
+
+login("alighm", googleLogin, facebookLogin, linkedInLogin, yahooLogin);
+login("nymasoud", facebookLogin);
